@@ -1,6 +1,5 @@
 import mlflow
 import os
-
 print (mlflow.tracking.get_tracking_uri())
 
 os.makedirs("mlruns", exist_ok=True)
@@ -80,9 +79,9 @@ with mlflow.start_run():
         best_model_name = "Decision Tree"
         best_model = ClassTree
 
-    precision = precision_score(Test_y, preds)
-    recall = recall_score(Test_y, preds)
-    f1 = f1_score(Test_y, preds)
+    precision = precision_score(Test_y, preds, pos_label="Yes")
+    recall = recall_score(Test_y, preds, pos_label="Yes")
+    f1 = f1_score(Test_y, preds, pos_label="Yes")
     accuracy = accuracy_score(Test_y, ClassTree.predict(Test_X))
     mlflow.log_metric("accuracy", accuracy)
     mlflow.log_metric("precision", precision)
@@ -113,9 +112,9 @@ with mlflow.start_run():
     RanForest.fit(Train_X, Train_y)
     RanForest.predict(Test_X)
     preds = RanForest.predict(Test_X)
-    precision = precision_score(Test_y, preds)
-    recall = recall_score(Test_y, preds)
-    f1 = f1_score(Test_y, preds)
+    precision = precision_score(Test_y, preds, pos_label="Yes")
+    recall = recall_score(Test_y, preds, pos_label="Yes")
+    f1 = f1_score(Test_y, preds, pos_label="Yes")
     accuracy = accuracy_score(Test_y, preds)
 
 # Track best model

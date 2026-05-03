@@ -146,7 +146,7 @@ with mlflow.start_run():
     mlflow.log_metric("best_accuracy", best_accuracy)
 
 
-joblib.dump(best_model, "models/model1.pkl")
+joblib.dump(best_model, "models/model.pkl")
 print(f"Best Model: {best_model_name}")
 print(f"Best Accuracy: {best_accuracy}")
 

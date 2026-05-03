@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/fae2f301e5c9472f9345e0b56110c4d1/artifacts
+end_time: 1777799632581
+entry_point_name: ''
+experiment_id: '298425548643314000'
+lifecycle_stage: active
+run_id: fae2f301e5c9472f9345e0b56110c4d1
+run_name: overjoyed-robin-754
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777799623315
+status: 3
+tags: []
+user_id: mac

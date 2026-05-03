@@ -1,0 +1,7 @@
+{
+  "accuracy_score-2_Test_X": "accuracy_score(y_true=Test_y, y_pred=<ndarray>)",
+  "accuracy_score_Test_X": "accuracy_score(y_true=Test_y, y_pred=preds)",
+  "f1_score_Test_X": "f1_score(y_true=Test_y, y_pred=preds, pos_label='Yes')",
+  "precision_score_Test_X": "precision_score(y_true=Test_y, y_pred=preds, pos_label='Yes')",
+  "recall_score_Test_X": "recall_score(y_true=Test_y, y_pred=preds, pos_label='Yes')"
+}

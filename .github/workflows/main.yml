@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.11
 
@@ -20,11 +20,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run ML script
-        run: python main.py
+        run: python hello.py
 
       - name: Check output file
         run: |
-          if [ ! -f model.pkl ]; then
+          if [ ! -f models/model.pkl ]; then
             echo "Model not created!"
             exit 1
           fi

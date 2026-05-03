@@ -15,6 +15,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from mlflow.models.signature import infer_signature
 import joblib
+import os
+
+os.makedirs("models", exist_ok=True)
+
 
 pd_data = "data/telco-Customer-Churn.csv"
 read_data = pd.read_csv(pd_data)

@@ -37,8 +37,12 @@ from database import engine
 import pandas as pd
 import joblib
 import numpy as np
+import os
+
 
 app = FastAPI()
+
+os.makedirs("models", exist_ok=True)
 
 model = joblib.load("models/model1.pkl")
 

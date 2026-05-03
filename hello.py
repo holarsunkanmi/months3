@@ -1,7 +1,10 @@
 import mlflow
 
 print (mlflow.tracking.get_tracking_uri())
-mlflow.set_tracking_uri("file:./mlflow_runs")
+
+os.makedirs("mlruns", exist_ok=True)
+
+mlflow.set_tracking_uri("file:./mlruns")
 mlflow.set_experiment("Months3_Experiment")
 mlflow.sklearn.autolog()
 
@@ -47,14 +50,16 @@ Train_X, Test_X, Train_y, Test_y = train_test_split(X, y, test_size=0.25, random
 
 #PARAMS
 
-params = {
+tree_params = {
     "random_state": 42,
     "max_leaf_nodes": 50,
     "max_depth": 5,
-    "min_samples_split": 2,
-    "min_samples_leaf": 1,
-    "criterion": "gini",
-    "class_weight": None,
+}
+
+forest_params = {
+    "random_state": 42,
+    "n_estimators": 100,
+    "max_depth": 5,
 }
 
 # LOGISTIC REGRESSION
@@ -64,7 +69,7 @@ best_model_name = ""
 best_model = None
 
 with mlflow.start_run():
-    ClassTree = DecisionTreeClassifier(**params)
+    ClassTree = DecisionTreeClassifier(**tree_params)
     ClassTree.fit(Train_X, Train_y)
     ClassTree.predict(Test_X)  
     preds = ClassTree.predict(Test_X) 
@@ -74,16 +79,16 @@ with mlflow.start_run():
         best_model_name = "Decision Tree"
         best_model = ClassTree
 
-    precision = precision_score(Test_y, preds, pos_label="Yes")
-    recall = recall_score(Test_y, preds, pos_label="Yes")
-    f1 = f1_score(Test_y, preds, pos_label="Yes")
+    precision = precision_score(Test_y, preds)
+    recall = recall_score(Test_y, preds)
+    f1 = f1_score(Test_y, preds)
     accuracy = accuracy_score(Test_y, ClassTree.predict(Test_X))
     mlflow.log_metric("accuracy", accuracy)
     mlflow.log_metric("precision", precision)
     mlflow.log_metric("recall", recall)
     mlflow.log_metric("f1_score", f1)
-    mlflow.log_artifact(pd_data)
-    mlflow.log_params(params)
+    mlflow.log_artifact("data/telco-Customer-Churn.csv")
+    mlflow.log_params(tree_params)
    
 
     signatures = infer_signature(Train_X, ClassTree.predict(Test_X))
@@ -103,13 +108,13 @@ with mlflow.start_run():
 
 with mlflow.start_run():
 
-    RanForest = RandomForestClassifier(**params)
+    RanForest = RandomForestClassifier(**forest_params)
     RanForest.fit(Train_X, Train_y)
     RanForest.predict(Test_X)
     preds = RanForest.predict(Test_X)
-    precision = precision_score(Test_y, preds, pos_label="Yes")
-    recall = recall_score(Test_y, preds, pos_label="Yes")
-    f1 = f1_score(Test_y, preds, pos_label="Yes")
+    precision = precision_score(Test_y, preds)
+    recall = recall_score(Test_y, preds)
+    f1 = f1_score(Test_y, preds)
     accuracy = accuracy_score(Test_y, preds)
 
 # Track best model
@@ -121,8 +126,8 @@ with mlflow.start_run():
     mlflow.log_metric("precision", precision)
     mlflow.log_metric("recall", recall)
     mlflow.log_metric("f1_score", f1)
-    mlflow.log_artifact(pd_data)
-    mlflow.log_params(params)
+    mlflow.log_artifact("data/telco-Customer-Churn.csv")
+    mlflow.log_params(forest_params)
 
 
     signature = infer_signature(Train_X, RanForest.predict(Test_X))

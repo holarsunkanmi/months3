@@ -1,4 +1,5 @@
 import mlflow
+import os
 
 print (mlflow.tracking.get_tracking_uri())
 
@@ -18,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from mlflow.models.signature import infer_signature
 import joblib
-import os
+
 
 os.makedirs("models", exist_ok=True)
 

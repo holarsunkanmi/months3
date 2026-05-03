@@ -1,16 +1,16 @@
-creation_timestamp: 1777404031033
+creation_timestamp: 1777703598719
 current_stage: None
 deployment_job_state: null
 description: null
-last_updated_timestamp: 1777404031033
-model_id: m-72d4e844eb614c49ab8ae20e3531e8ac
+last_updated_timestamp: 1777703598719
+model_id: m-070bbd84d6034857bb2f41f659187d54
 name: Churns Forest
-run_id: 2b3c58615cc149ae9c5f02418225e1b9
+run_id: 846bba81039d4968b02c0f8161487daf
 run_link: null
-source: models:/m-72d4e844eb614c49ab8ae20e3531e8ac
+source: models:/m-070bbd84d6034857bb2f41f659187d54
 status: READY
 status_message: null
-storage_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/867642882096534210/models/m-72d4e844eb614c49ab8ae20e3531e8ac/artifacts
+storage_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/models/m-070bbd84d6034857bb2f41f659187d54/artifacts
 user_id: null
 version: 1
 workspace: default

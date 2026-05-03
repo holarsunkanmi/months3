@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/212c0bc1ec7748eaa4d283000e696027/artifacts
+end_time: 1777704064897
+entry_point_name: ''
+experiment_id: '298425548643314000'
+lifecycle_stage: active
+run_id: 212c0bc1ec7748eaa4d283000e696027
+run_name: legendary-robin-258
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777704054464
+status: 3
+tags: []
+user_id: mac

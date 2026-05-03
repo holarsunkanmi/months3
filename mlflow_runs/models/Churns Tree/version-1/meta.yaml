@@ -1,16 +1,16 @@
-creation_timestamp: 1777404102106
+creation_timestamp: 1777703585187
 current_stage: None
 deployment_job_state: null
 description: null
-last_updated_timestamp: 1777404102106
-model_id: m-de61a7db47ba4acd900bf3bf1948bad4
+last_updated_timestamp: 1777703585187
+model_id: m-c97f827655974a71996800311c23ef54
 name: Churns Tree
-run_id: 2b3c58615cc149ae9c5f02418225e1b9
+run_id: 8e9a102d8c184f03972a58eb7f553c81
 run_link: null
-source: models:/m-de61a7db47ba4acd900bf3bf1948bad4
+source: models:/m-c97f827655974a71996800311c23ef54
 status: READY
 status_message: null
-storage_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/867642882096534210/models/m-de61a7db47ba4acd900bf3bf1948bad4/artifacts
+storage_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/models/m-c97f827655974a71996800311c23ef54/artifacts
 user_id: null
 version: 1
 workspace: default

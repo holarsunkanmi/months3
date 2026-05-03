@@ -1,0 +1,10 @@
+artifact_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/models/m-4450fe45e1574eefb46c24f093c79f32/artifacts
+creation_timestamp: 1777704286151
+experiment_id: '298425548643314000'
+last_updated_timestamp: 1777704290348
+model_id: m-4450fe45e1574eefb46c24f093c79f32
+model_type: null
+name: model
+source_run_id: 4d446ace157c4ea38f2133a06bafc7cf
+status: 2
+status_message: null

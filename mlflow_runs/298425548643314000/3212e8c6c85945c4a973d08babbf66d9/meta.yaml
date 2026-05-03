@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/3212e8c6c85945c4a973d08babbf66d9/artifacts
+end_time: 1777704054461
+entry_point_name: ''
+experiment_id: '298425548643314000'
+lifecycle_stage: active
+run_id: 3212e8c6c85945c4a973d08babbf66d9
+run_name: merciful-turtle-972
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777704044862
+status: 3
+tags: []
+user_id: mac

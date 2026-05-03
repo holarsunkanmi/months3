@@ -1,0 +1,10 @@
+artifact_location: file:///Users/mac/Documents/PythonProjects/Months 3/mlflow_runs/298425548643314000/models/m-4fc465a157954fbea0fd21ad08e53cf6/artifacts
+creation_timestamp: 1777704060461
+experiment_id: '298425548643314000'
+last_updated_timestamp: 1777704064655
+model_id: m-4fc465a157954fbea0fd21ad08e53cf6
+model_type: null
+name: Churns Forest
+source_run_id: 212c0bc1ec7748eaa4d283000e696027
+status: 2
+status_message: null
